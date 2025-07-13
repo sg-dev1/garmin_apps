@@ -3,6 +3,7 @@ import Toybox.WatchUi;
 import Toybox.ActivityRecording;
 import Toybox.System;
 import Toybox.Lang;
+import Toybox.Sensor;
 
 class BoulderingAppView extends WatchUi.View {
 
@@ -10,6 +11,9 @@ class BoulderingAppView extends WatchUi.View {
 
     function initialize() {
         View.initialize();
+        // SENSOR_PULSE_OXIMETRY = oxygen saturation
+        //    https://www.garmin.com/en-US/garmin-technology/health-science/pulse-ox/
+        Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE/*, Sensor.SENSOR_PULSE_OXIMETRY, Sensor.SENSOR_TEMPERATURE*/]);
     }
 
     // Load your resources here
